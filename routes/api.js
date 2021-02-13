@@ -14,7 +14,7 @@ const music = {
 		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
 	}
 };
-$.ajax(settings).done(function (response) {
+$.ajax(music).done(function (response) {
 	console.log(response);
 });
 
@@ -69,6 +69,27 @@ const restaurants = {
 		"x-rapidapi-host": "documenu.p.rapidapi.com"
 	}
 };
-$.ajax(settings).done(function (response) {
+$.ajax(restaurants).done(function (response) {
+	console.log(response);
+});
+
+
+/*
+ 
+ This api is to get weather forecast
+
+ */
+
+const weather = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://community-open-weather-map.p.rapidapi.com/weather?q=London%2Cuk&lat=0&lon=0&callback=test&id=2172797&lang=null&units=%22metric%22%20or%20%22imperial%22&mode=xml%2C%20html",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "588216e7famsh2752fb22e9ec682p17fa74jsn07240aafab1d",
+		"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
+	}
+};
+$.ajax(weather).done(function (response) {
 	console.log(response);
 });
