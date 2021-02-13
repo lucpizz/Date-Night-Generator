@@ -2,7 +2,8 @@
   "env": {
       "browser": true,
       "commonjs": true,
-      "node": true
+      "node": true,
+      "es6": true
   },
   "rules": {
       "no-duplicate-case":"error",
@@ -37,11 +38,8 @@
           "error",
           "always"
       ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017
   }
-}
-{
-    "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"]
-    }
 }
