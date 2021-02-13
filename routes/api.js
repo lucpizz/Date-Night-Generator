@@ -58,7 +58,7 @@ function spoonApiCall() {
 
  */
 
-const resturants = {
+const restaurants = {
 	"async": true,
 	"crossDomain": true,
 	"url": "https://documenu.p.rapidapi.com/restaurants/zip_code/6824?size=30&cuisine=Italian&fullmenu=true&top_cuisines=true&page=2",
