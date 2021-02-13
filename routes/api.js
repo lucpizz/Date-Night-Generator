@@ -4,7 +4,7 @@
 
 */
 
-const settings = {
+const music = {
 	"async": true,
 	"crossDomain": true,
 	"url": "https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem",
@@ -51,3 +51,24 @@ function spoonApiCall() {
   });
   console.log("Length of JSON-returned list " + spoonLength);
 }
+
+/*
+  
+ This api is to get local area resturants
+
+ */
+
+const resturants = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://documenu.p.rapidapi.com/restaurants/zip_code/6824?size=30&cuisine=Italian&fullmenu=true&top_cuisines=true&page=2",
+	"method": "GET",
+	"headers": {
+		"x-api-key": "71b5bfaf79305a51800a453a79324cf8",
+		"x-rapidapi-key": "588216e7famsh2752fb22e9ec682p17fa74jsn07240aafab1d",
+		"x-rapidapi-host": "documenu.p.rapidapi.com"
+	}
+};
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
