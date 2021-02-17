@@ -1,10 +1,1102 @@
 {
 	"info": {
 		"_postman_id": "ef884e4c-4d6e-42ca-8ad0-eaa083109c06",
-		"name": "Date Night Project",
+		"name": "Date Night Project api calls",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "MovieGLU requests",
+			"item": [
+				{
+					"name": "filmShowTimes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "True",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-version",
+								"value": "v200",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "SCHO_29",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+								"type": "text"
+							},
+							{
+								"key": "device-datetime",
+								"value": "2021-02-16T08:30:17.360Z",
+								"type": "text"
+							},
+							{
+								"key": "territory",
+								"value": "XX",
+								"type": "text"
+							},
+							{
+								"key": "Geolocation",
+								"value": "-22.0;14.0",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "Brunobborges",
+								"type": "text"
+							},
+							{
+								"key": "app_version",
+								"value": "0.1",
+								"type": "text"
+							},
+							{
+								"key": "app_platform",
+								"value": "Web",
+								"type": "text"
+							},
+							{
+								"key": "language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-gate2.movieglu.com/filmShowTimes/?film_id=7772&date=2021-02-16",
+							"protocol": "https",
+							"host": [
+								"api-gate2",
+								"movieglu",
+								"com"
+							],
+							"path": [
+								"filmShowTimes",
+								""
+							],
+							"query": [
+								{
+									"key": "film_id",
+									"value": "7772"
+								},
+								{
+									"key": "date",
+									"value": "2021-02-16"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmsNowShowing",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "True",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-version",
+								"value": "v200",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "SCHO_29",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+								"type": "text"
+							},
+							{
+								"key": "device-datetime",
+								"value": "2021-02-16T08:30:17.360Z",
+								"type": "text"
+							},
+							{
+								"key": "territory",
+								"value": "XX",
+								"type": "text"
+							},
+							{
+								"key": "Geolocation",
+								"value": "-22.0;14.0",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "Brunobborges",
+								"type": "text"
+							},
+							{
+								"key": "app_version",
+								"value": "0.1",
+								"type": "text"
+							},
+							{
+								"key": "app_platform",
+								"value": "Web",
+								"type": "text"
+							},
+							{
+								"key": "language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-gate2.movieglu.com/filmsNowShowing/?n=10",
+							"protocol": "https",
+							"host": [
+								"api-gate2",
+								"movieglu",
+								"com"
+							],
+							"path": [
+								"filmsNowShowing",
+								""
+							],
+							"query": [
+								{
+									"key": "n",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmsComingSoon",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "True",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-version",
+								"value": "v200",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "SCHO_29",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+								"type": "text"
+							},
+							{
+								"key": "device-datetime",
+								"value": "2021-02-16T08:30:17.360Z",
+								"type": "text"
+							},
+							{
+								"key": "territory",
+								"value": "XX",
+								"type": "text"
+							},
+							{
+								"key": "Geolocation",
+								"value": "-22.0;14.0",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "Brunobborges",
+								"type": "text"
+							},
+							{
+								"key": "app_version",
+								"value": "0.1",
+								"type": "text"
+							},
+							{
+								"key": "app_platform",
+								"value": "Web",
+								"type": "text"
+							},
+							{
+								"key": "language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-gate2.movieglu.com/filmsComingSoon/?n=10",
+							"protocol": "https",
+							"host": [
+								"api-gate2",
+								"movieglu",
+								"com"
+							],
+							"path": [
+								"filmsComingSoon",
+								""
+							],
+							"query": [
+								{
+									"key": "n",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "closestShowing",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "True",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-version",
+								"value": "v200",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "SCHO_29",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+								"type": "text"
+							},
+							{
+								"key": "device-datetime",
+								"value": "2021-02-16T08:30:17.360Z",
+								"type": "text"
+							},
+							{
+								"key": "territory",
+								"value": "XX",
+								"type": "text"
+							},
+							{
+								"key": "Geolocation",
+								"value": "-22.0;14.0",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "Brunobborges",
+								"type": "text"
+							},
+							{
+								"key": "app_version",
+								"value": "0.1",
+								"type": "text"
+							},
+							{
+								"key": "app_platform",
+								"value": "Web",
+								"type": "text"
+							},
+							{
+								"key": "language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-gate2.movieglu.com/closestShowing/?film_id=7772&n=5",
+							"protocol": "https",
+							"host": [
+								"api-gate2",
+								"movieglu",
+								"com"
+							],
+							"path": [
+								"closestShowing",
+								""
+							],
+							"query": [
+								{
+									"key": "film_id",
+									"value": "7772"
+								},
+								{
+									"key": "n",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "images",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "True",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-version",
+								"value": "v200",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "SCHO_29",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+								"type": "text"
+							},
+							{
+								"key": "device-datetime",
+								"value": "2021-02-16T08:30:17.360Z",
+								"type": "text"
+							},
+							{
+								"key": "territory",
+								"value": "XX",
+								"type": "text"
+							},
+							{
+								"key": "Geolocation",
+								"value": "-22.0;14.0",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "Brunobborges",
+								"type": "text"
+							},
+							{
+								"key": "app_version",
+								"value": "0.1",
+								"type": "text"
+							},
+							{
+								"key": "app_platform",
+								"value": "Web",
+								"type": "text"
+							},
+							{
+								"key": "language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-gate2.movieglu.com/images/?film_id=7772",
+							"protocol": "https",
+							"host": [
+								"api-gate2",
+								"movieglu",
+								"com"
+							],
+							"path": [
+								"images",
+								""
+							],
+							"query": [
+								{
+									"key": "film_id",
+									"value": "7772"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trailers",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "True",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-version",
+								"value": "v200",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "SCHO_29",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+								"type": "text"
+							},
+							{
+								"key": "device-datetime",
+								"value": "2021-02-16T08:30:17.360Z",
+								"type": "text"
+							},
+							{
+								"key": "territory",
+								"value": "XX",
+								"type": "text"
+							},
+							{
+								"key": "Geolocation",
+								"value": "-22.0;14.0",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "Brunobborges",
+								"type": "text"
+							},
+							{
+								"key": "app_version",
+								"value": "0.1",
+								"type": "text"
+							},
+							{
+								"key": "app_platform",
+								"value": "Web",
+								"type": "text"
+							},
+							{
+								"key": "language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-gate2.movieglu.com/trailers/?film_id=7772",
+							"protocol": "https",
+							"host": [
+								"api-gate2",
+								"movieglu",
+								"com"
+							],
+							"path": [
+								"trailers",
+								""
+							],
+							"query": [
+								{
+									"key": "film_id",
+									"value": "7772"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cinemaDetails",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "True",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-version",
+								"value": "v200",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "SCHO_29",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+								"type": "text"
+							},
+							{
+								"key": "device-datetime",
+								"value": "2021-02-16T08:30:17.360Z",
+								"type": "text"
+							},
+							{
+								"key": "territory",
+								"value": "XX",
+								"type": "text"
+							},
+							{
+								"key": "Geolocation",
+								"value": "-22.0;14.0",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "Brunobborges",
+								"type": "text"
+							},
+							{
+								"key": "app_version",
+								"value": "0.1",
+								"type": "text"
+							},
+							{
+								"key": "app_platform",
+								"value": "Web",
+								"type": "text"
+							},
+							{
+								"key": "language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-gate2.movieglu.com/cinemaDetails/?cinema_id=10636",
+							"protocol": "https",
+							"host": [
+								"api-gate2",
+								"movieglu",
+								"com"
+							],
+							"path": [
+								"cinemaDetails",
+								""
+							],
+							"query": [
+								{
+									"key": "cinema_id",
+									"value": "10636"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cinemasNearby",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "True",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-version",
+								"value": "v200",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "SCHO_29",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+								"type": "text"
+							},
+							{
+								"key": "device-datetime",
+								"value": "2021-02-16T08:30:17.360Z",
+								"type": "text"
+							},
+							{
+								"key": "territory",
+								"value": "XX",
+								"type": "text"
+							},
+							{
+								"key": "Geolocation",
+								"value": "-22.0;14.0",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "Brunobborges",
+								"type": "text"
+							},
+							{
+								"key": "app_version",
+								"value": "0.1",
+								"type": "text"
+							},
+							{
+								"key": "app_platform",
+								"value": "Web",
+								"type": "text"
+							},
+							{
+								"key": "language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-gate2.movieglu.com/cinemasNearby/?n=24",
+							"protocol": "https",
+							"host": [
+								"api-gate2",
+								"movieglu",
+								"com"
+							],
+							"path": [
+								"cinemasNearby",
+								""
+							],
+							"query": [
+								{
+									"key": "n",
+									"value": "24"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cinemaShowTimes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-version",
+								"value": "v200",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "SCHO_29",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+								"type": "text"
+							},
+							{
+								"key": "device-datetime",
+								"value": "2021-02-16T08:30:17.360Z",
+								"type": "text"
+							},
+							{
+								"key": "territory",
+								"value": "XX",
+								"type": "text"
+							},
+							{
+								"key": "Geolocation",
+								"value": "-22.0;14.0",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "Brunobborges",
+								"type": "text"
+							},
+							{
+								"key": "app_version",
+								"value": "0.1",
+								"type": "text"
+							},
+							{
+								"key": "app_platform",
+								"value": "Web",
+								"type": "text"
+							},
+							{
+								"key": "language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-gate2.movieglu.com/cinemaShowTimes/?cinema_id=10636&date=2021-02-21",
+							"protocol": "https",
+							"host": [
+								"api-gate2",
+								"movieglu",
+								"com"
+							],
+							"path": [
+								"cinemaShowTimes",
+								""
+							],
+							"query": [
+								{
+									"key": "cinema_id",
+									"value": "10636"
+								},
+								{
+									"key": "date",
+									"value": "2021-02-21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmDetails",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "True",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-version",
+								"value": "v200",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "SCHO_29",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "aPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ",
+								"type": "text"
+							},
+							{
+								"key": "device-datetime",
+								"value": "2021-02-16T08:30:17.360Z",
+								"type": "text"
+							},
+							{
+								"key": "territory",
+								"value": "XX",
+								"type": "text"
+							},
+							{
+								"key": "Geolocation",
+								"value": "-22.0;14.0",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "Brunobborges",
+								"type": "text"
+							},
+							{
+								"key": "app_version",
+								"value": "0.1",
+								"type": "text"
+							},
+							{
+								"key": "app_platform",
+								"value": "Web",
+								"type": "text"
+							},
+							{
+								"key": "language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-gate2.movieglu.com/filmDetails/?film_id=7772",
+							"protocol": "https",
+							"host": [
+								"api-gate2",
+								"movieglu",
+								"com"
+							],
+							"path": [
+								"filmDetails",
+								""
+							],
+							"query": [
+								{
+									"key": "film_id",
+									"value": "7772"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
 		{
 			"name": "Deezer API req",
 			"protocolProfileBehavior": {
@@ -166,864 +1258,6 @@
 						{
 							"key": "q",
 							"value": "Hartford,Connecticut"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "filmShowTimes",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "api-version",
-						"value": "{{api_version}}"
-					},
-					{
-						"key": "Authorization",
-						"value": "{{auth_pw}}"
-					},
-					{
-						"key": "Geolocation",
-						"value": "{{lat_lng}}"
-					},
-					{
-						"key": "client",
-						"value": "{{client}}"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "device-datetime",
-						"value": "{{device-datetime}}"
-					},
-					{
-						"key": "territory",
-						"value": "{{territory}}"
-					},
-					{
-						"key": "user_id",
-						"value": "{{user_id}}"
-					},
-					{
-						"key": "app_version",
-						"value": "{{app_version}}"
-					},
-					{
-						"key": "app_platform",
-						"value": "{{app_platform}}"
-					},
-					{
-						"key": "language",
-						"value": "{{language}}"
-					}
-				],
-				"url": {
-					"raw": "{{ep}}filmShowTimes/?film_id=209337&date=2018-02-23",
-					"host": [
-						"{{ep}}filmShowTimes"
-					],
-					"path": [
-						""
-					],
-					"query": [
-						{
-							"key": "film_id",
-							"value": "209337"
-						},
-						{
-							"key": "date",
-							"value": "2018-02-23"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "New Request",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "client",
-						"value": "SCHO_29",
-						"type": "text"
-					},
-					{
-						"key": "x-api-key",
-						"value": " \taPhjnCnhZlaBSIFOB3jwB7d910N2furE9HkCdLkQ ",
-						"type": "text"
-					},
-					{
-						"key": "credential",
-						"value": " \t \tBasic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s=  ",
-						"type": "text"
-					},
-					{
-						"key": "territory",
-						"value": "XX",
-						"type": "text"
-					},
-					{
-						"key": "api-version",
-						"value": "v200",
-						"type": "text"
-					},
-					{
-						"key": "geolocation",
-						"value": " \t-22.0;14.0",
-						"type": "text"
-					},
-					{
-						"key": "device-datetime",
-						"value": "2021-02-13T18:22:13.292Z",
-						"type": "text"
-					},
-					{
-						"key": "Authorization",
-						"value": " Basic U0NIT18yOV9YWDpaalFGWFB3M2dtT0s= ",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://api-gate2.movieglu.com/",
-					"protocol": "https",
-					"host": [
-						"api-gate2",
-						"movieglu",
-						"com"
-					],
-					"path": [
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "filmsNowShowing",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "api-version",
-						"value": "{{api_version}}"
-					},
-					{
-						"key": "Authorization",
-						"value": "{{auth_pw}}"
-					},
-					{
-						"key": "client",
-						"value": "{{client}}"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "device-datetime",
-						"value": "{{device-datetime}}"
-					},
-					{
-						"key": "territory",
-						"value": "{{territory}}"
-					},
-					{
-						"key": "Geolocation",
-						"value": "{{lat_lng}}"
-					},
-					{
-						"key": "user_id",
-						"value": "{{user_id}}"
-					},
-					{
-						"key": "app_version",
-						"value": "{{app_version}}"
-					},
-					{
-						"key": "app_platform",
-						"value": "{{app_platform}}"
-					},
-					{
-						"key": "language",
-						"value": "{{language}}"
-					}
-				],
-				"url": {
-					"raw": "{{ep}}filmsNowShowing/?n=10",
-					"host": [
-						"{{ep}}filmsNowShowing"
-					],
-					"path": [
-						""
-					],
-					"query": [
-						{
-							"key": "n",
-							"value": "10"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "filmsComingSoon",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "api-version",
-						"value": "{{api_version}}"
-					},
-					{
-						"key": "Authorization",
-						"value": "{{auth_pw}}"
-					},
-					{
-						"key": "client",
-						"value": "{{client}}"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "device-datetime",
-						"value": "{{device-datetime}}"
-					},
-					{
-						"key": "territory",
-						"value": "{{territory}}"
-					},
-					{
-						"key": "user_id",
-						"value": "{{user_id}}"
-					},
-					{
-						"key": "app_version",
-						"value": "{{app_version}}"
-					},
-					{
-						"key": "app_platform",
-						"value": "Win10"
-					},
-					{
-						"key": "language",
-						"value": "{{language}}"
-					}
-				],
-				"url": {
-					"raw": "{{ep}}filmsComingSoon/?n=10",
-					"host": [
-						"{{ep}}filmsComingSoon"
-					],
-					"path": [
-						""
-					],
-					"query": [
-						{
-							"key": "n",
-							"value": "10"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "closestShowing",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "api-version",
-						"value": "{{api_version}}"
-					},
-					{
-						"key": "Authorization",
-						"value": "{{auth_pw}}"
-					},
-					{
-						"key": "Geolocation",
-						"value": "{{lat_lng}}"
-					},
-					{
-						"key": "client",
-						"value": "{{client}}"
-					},
-					{
-						"key": "user_id",
-						"value": "{{user_id}}"
-					},
-					{
-						"key": "app_version",
-						"value": "{{app_version}}"
-					},
-					{
-						"key": "app_platform",
-						"value": "{{app_platform}}"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "device-datetime",
-						"value": "{{device-datetime}}"
-					},
-					{
-						"key": "territory",
-						"value": "{{territory}}"
-					},
-					{
-						"key": "language",
-						"value": "{{language}}"
-					}
-				],
-				"url": {
-					"raw": "{{ep}}closestShowing/?film_id=209337&n=5",
-					"host": [
-						"{{ep}}closestShowing"
-					],
-					"path": [
-						""
-					],
-					"query": [
-						{
-							"key": "film_id",
-							"value": "209337"
-						},
-						{
-							"key": "n",
-							"value": "5"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "filmDetails",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "api-version",
-						"value": "{{api_version}}"
-					},
-					{
-						"key": "Authorization",
-						"value": "{{auth_pw}}"
-					},
-					{
-						"key": "client",
-						"value": "{{client}}"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "device-datetime",
-						"value": "{{device-datetime}}"
-					},
-					{
-						"key": "territory",
-						"value": "{{territory}}"
-					},
-					{
-						"key": "user_id",
-						"value": "{{user_id}}"
-					},
-					{
-						"key": "app_version",
-						"value": "{{app_version}}"
-					},
-					{
-						"key": "app_platform",
-						"value": "{{app_platform}}"
-					},
-					{
-						"key": "language",
-						"value": "{{language}}"
-					}
-				],
-				"url": {
-					"raw": "{{ep}}filmDetails/?film_id=14",
-					"host": [
-						"{{ep}}filmDetails"
-					],
-					"path": [
-						""
-					],
-					"query": [
-						{
-							"key": "film_id",
-							"value": "14"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "images",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "api-version",
-						"value": "{{api_version}}"
-					},
-					{
-						"key": "Authorization",
-						"value": "{{auth_pw}}"
-					},
-					{
-						"key": "client",
-						"value": "{{client}}"
-					},
-					{
-						"key": "user_id",
-						"value": "{{user_id}}"
-					},
-					{
-						"key": "voucher_code",
-						"value": "{{voucher_code}}"
-					},
-					{
-						"key": "app_version",
-						"value": "{{app_version}}"
-					},
-					{
-						"key": "app_platform",
-						"value": "Win10"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "device-datetime",
-						"value": "{{device-datetime}}"
-					},
-					{
-						"key": "territory",
-						"value": "{{territory}}"
-					},
-					{
-						"key": "language",
-						"value": "{{language}}"
-					}
-				],
-				"url": {
-					"raw": "{{ep}}images/?film_id=123441",
-					"host": [
-						"{{ep}}images"
-					],
-					"path": [
-						""
-					],
-					"query": [
-						{
-							"key": "film_id",
-							"value": "123441"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "cinemaDetails",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "api-version",
-						"value": "{{api_version}}"
-					},
-					{
-						"key": "Authorization",
-						"value": "{{auth_pw}}"
-					},
-					{
-						"key": "Geolocation",
-						"value": "{{lat_lng}}"
-					},
-					{
-						"key": "client",
-						"value": "{{client}}"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "device-datetime",
-						"value": "{{device-datetime}}"
-					},
-					{
-						"key": "territory",
-						"value": "{{territory}}"
-					},
-					{
-						"key": "user_id",
-						"value": "{{user_id}}"
-					},
-					{
-						"key": "app_version",
-						"value": "{{app_version}}"
-					},
-					{
-						"key": "app_platform",
-						"value": "{{app_platform}}"
-					},
-					{
-						"key": "language",
-						"value": "{{language}}"
-					}
-				],
-				"url": {
-					"raw": "{{ep}}cinemaDetails/?cinema_id=8942",
-					"host": [
-						"{{ep}}cinemaDetails"
-					],
-					"path": [
-						""
-					],
-					"query": [
-						{
-							"key": "cinema_id",
-							"value": "8942"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "trailers",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "api-version",
-						"value": "{{api_version}}"
-					},
-					{
-						"key": "Authorization",
-						"value": "{{auth_pw}}"
-					},
-					{
-						"key": "client",
-						"value": "{{client}}"
-					},
-					{
-						"key": "user_id",
-						"value": "{{user_id}}"
-					},
-					{
-						"key": "voucher_code",
-						"value": "{{voucher_code}}"
-					},
-					{
-						"key": "app_version",
-						"value": "{{app_version}}"
-					},
-					{
-						"key": "app_platform",
-						"value": "{{app_platform}}"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "device-datetime",
-						"value": "{{device-datetime}}"
-					},
-					{
-						"key": "territory",
-						"value": "{{territory}}"
-					},
-					{
-						"key": "language",
-						"value": "{{language}}"
-					}
-				],
-				"url": {
-					"raw": "{{ep}}trailers/?film_id=188115",
-					"host": [
-						"{{ep}}trailers"
-					],
-					"path": [
-						""
-					],
-					"query": [
-						{
-							"key": "film_id",
-							"value": "188115"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "cinemasNearby",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "api-version",
-						"value": "{{api_version}}"
-					},
-					{
-						"key": "Authorization",
-						"value": "{{auth_pw}}"
-					},
-					{
-						"key": "Geolocation",
-						"value": "{{lat_lng}}"
-					},
-					{
-						"key": "client",
-						"value": "{{client}}"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "device-datetime",
-						"value": "{{device-datetime}}"
-					},
-					{
-						"key": "territory",
-						"value": "{{territory}}"
-					},
-					{
-						"key": "user_id",
-						"value": "{{user_id}}"
-					},
-					{
-						"key": "app_version",
-						"value": "{{app_version}}"
-					},
-					{
-						"key": "app_platform",
-						"value": "{{app_platform}}"
-					},
-					{
-						"key": "language",
-						"value": "{{language}}"
-					}
-				],
-				"url": {
-					"raw": "{{ep}}cinemasNearby/?n=24",
-					"host": [
-						"{{ep}}cinemasNearby"
-					],
-					"path": [
-						""
-					],
-					"query": [
-						{
-							"key": "n",
-							"value": "24"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "cinemaShowTimes",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"postman.setEnvironmentVariable('device-datetime', new Date().toISOString());"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "api-version",
-						"value": "{{api_version}}"
-					},
-					{
-						"key": "Authorization",
-						"value": "{{auth_pw}}"
-					},
-					{
-						"key": "Geolocation",
-						"value": "{{lat_lng}}"
-					},
-					{
-						"key": "client",
-						"value": "{{client}}"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "device-datetime",
-						"value": "{{device-datetime}}"
-					},
-					{
-						"key": "territory",
-						"value": "{{territory}}"
-					},
-					{
-						"key": "user_id",
-						"value": "{{user_id}}"
-					},
-					{
-						"key": "app_version",
-						"value": "{{app_version}}"
-					},
-					{
-						"key": "app_platform",
-						"value": "{{app_platform}}"
-					},
-					{
-						"key": "language",
-						"value": "{{language}}"
-					}
-				],
-				"url": {
-					"raw": "{{ep}}cinemaShowTimes/?cinema_id=8941&date=2018-02-21",
-					"host": [
-						"{{ep}}cinemaShowTimes"
-					],
-					"path": [
-						""
-					],
-					"query": [
-						{
-							"key": "cinema_id",
-							"value": "8941"
-						},
-						{
-							"key": "date",
-							"value": "2018-02-21"
 						}
 					]
 				}
