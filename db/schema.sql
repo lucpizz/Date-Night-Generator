@@ -11,6 +11,7 @@ CREATE TABLE `date_DB` (
 `food` VARCHAR( 255),
 `movie` VARCHAR( 255),
 `music` VARCHAR( 255),
+`movieTime` VARCHAR( 6),
 
 PRIMARY KEY ( `id` )
 
