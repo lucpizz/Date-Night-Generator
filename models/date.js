@@ -13,7 +13,6 @@ module.exports = (sequelize, Sequelize) => {
       len: [1],
     },
   });
-
 };
 
 /*
