@@ -1,0 +1,44 @@
+<h1>Date Night Ideas</h1>
+
+{{!-- <ul>
+    {{#each date}}
+
+<script type="text/javascript">
+
+  // CREATE
+  const createDateBtn = document.getElementById('add date')
+
+  // Set up the event listener for the create button
+  createDateBtn.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Grabs the value of the textarea that goes by the name, "date"
+    const newDate = {
+      Date: document.getElementsByName('date')[0].value.trim()
+    }
+    console.log(newDate);
+
+    // Send POST request to create a new date night
+    fetch("/MovieApiFiles", {
+      method: "POST",
+      headers: {
+        'Accept': 'date/json',
+        'Content-Type': 'date/json'
+      },
+
+      //make sure to serialize the JSON body
+      body: JSON.stringify(newDate)
+    })
+      .then((response) => {
+        // Empty the form
+        document.getElementsByName('date')[0].value = ''
+
+        // Reload the page so the user can see the new date night idea
+        console.log("Created a new date night!")
+        location.reload()
+      });
+  })
+
+
+</script>
+</ul> --}}
