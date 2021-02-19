@@ -23,7 +23,6 @@ app.set("view engine", "handlebars");
 const routes = require("./controllers/dateController.js");
 
 // app.use(routes);
-
 // Start our server so that it can begin listening to client requests.
 dateTest.sequelize.sync().then(() => {
   app.listen(PORT, () => {
