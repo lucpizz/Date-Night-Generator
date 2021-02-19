@@ -21,15 +21,33 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+<<<<<<< HEAD
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 // require(`./routes/api-routes.js`)(app);
 //app.use("/music", routes);
+=======
+// Import routes and give the server access to them.
+//const routes = require("./controllers/dateController.js");
+// require(`./routes/api-routes.js`)(app);
+//app.use("/music" , routes);
+>>>>>>> fd077840774583f4fefb496762bb934ca33c6834
 // app.use(routes);
-// Start our server so that it can begin listening to client requests.
-dateTest.sequelize.sync().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server listening on: http://localhost:${PORT}`);
-  });
+
+const htmlRouter = require("./routes/date-routes");
+const db = require("./models");
+htmlRouter(app);
+
+const force =  true;
+
+db.sequelize.sync({ force }).then(() => {
+  app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
 });
+
+// Start our server so that it can begin listening to client requests.
+//dateTest.sequelize.sync().then(() => {
+ // app.listen(PORT, () => {
+//    console.log(`Server listening on: http://localhost:${PORT}`);
+//  });
+//});
