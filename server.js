@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 
 const PORT = process.env.PORT || 8080;
-
+const dateTest = require("./models");
 const app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -22,9 +22,11 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 const routes = require("./controllers/dateController.js");
 
-app.use(routes);
+// app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, () =>
-  console.log(`Server listening on: http://localhost:${PORT}`)
-);
+dateTest.sequelize.sync().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server listening on: http://localhost:${PORT}`);
+  });
+});

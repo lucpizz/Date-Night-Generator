@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "ef884e4c-4d6e-42ca-8ad0-eaa083109c06",
-		"name": "Date Night Project api calls",
+		"name": "Date Night Project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -1258,6 +1258,95 @@
 						{
 							"key": "q",
 							"value": "Hartford,Connecticut"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spoonacular API req",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "ed5633765b5d4ff993becd328073c45b",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "True",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-RapidAPI-Key",
+						"value": "ed5633765b5d4ff993becd328073c45b",
+						"type": "text"
+					},
+					{
+						"key": "X-RapidAPI-Host",
+						"value": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?Query=burger",
+					"protocol": "https",
+					"host": [
+						"spoonacular-recipe-food-nutrition-v1",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"recipes",
+						"search"
+					],
+					"query": [
+						{
+							"key": "Query",
+							"value": "burger"
+						},
+						{
+							"key": "cuisine",
+							"value": "(Italian, Indian, Chinese, etc;)",
+							"disabled": true
+						},
+						{
+							"key": "diet",
+							"value": "(Vegan, Vegetarian, pescatarian, etc;)",
+							"disabled": true
+						},
+						{
+							"key": "excludeIngredient",
+							"value": "(exclude an ingredient)",
+							"disabled": true
+						},
+						{
+							"key": "intolerances",
+							"value": "(allergies to anything) ",
+							"disabled": true
+						},
+						{
+							"key": "number",
+							"value": "(number of results to return 0-100)",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "(number of results to skip 0-900)",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "(main course, dessert, side course, etc);",
+							"disabled": true
 						}
 					]
 				}
