@@ -2,7 +2,7 @@
   "name": "date-night-generator",
   "version": "1.0.0",
   "description": "This application will track date night possibilities.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "eslint **/*.js --quiet"
