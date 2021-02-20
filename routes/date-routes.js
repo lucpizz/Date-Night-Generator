@@ -13,8 +13,8 @@ module.exports = (app) => {
 
     const create = await db.Date.create({
       name: req.body.location,
-      body: req.body.body,
-    }).then((dbDate) => res.json(dbDate));
+      rating: req.body.rating,
+    });
 
     const results = await db.Date.findAll({
       where: {
@@ -22,7 +22,7 @@ module.exports = (app) => {
       },
     });
 
-    res.render("handlebars-page", results);
-    res.send("a work in progress");
+    //res.render("handlebars-page", results);
+    res.json(results);
   });
 };
