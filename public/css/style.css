@@ -1,0 +1,69 @@
+/* media querys for responsiveness */
+@media only screen and (min-width: 993px) {
+
+    .btn-large {
+        margin-left: 10px;
+    }
+    nav .playlist-title{ 
+        font-size: 2.25rem;
+    }  
+    .flex-container {
+        display: flex;
+        align-items: center;
+        max-height: 250px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }    
+    .playlistview-tmbnail { 
+        max-width: 100px;
+        max-height: 100px;
+    }
+    h4 {
+        font-size: 2.5rem;
+    }
+    .songinfo {
+        font-size: 1.6rem;
+    }
+    .collapsible-header {
+        font-size: 1.25rem;
+    }
+    .collapsible-body {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media only screen and (max-width: 361px){
+    nav .playlist-title{ 
+        font-size: 1.5rem;
+    }  
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* Media Queries for logo size responsiveness */
+.logo-size {
+      margin-top: 50px;
+      height: 230px;
+      width: 385px;
+}
+
+@media screen and (min-width: 769px) {
+    .logo-size {
+        margin-top: 50px;
+        height: 300px;
+        width: 500px;
+  }
+}
+
+@media screen and (min-width: 1025px)  {
+
+    .logo-size {
+        margin-top: 50px;
+        height: 380px;
+        width: 655px;
+  }
+}
