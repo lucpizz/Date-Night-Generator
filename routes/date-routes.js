@@ -11,12 +11,12 @@ module.exports = (app) => {
 
     //console.log(req.body.name, req.body.body);
 
-    const create = await db.Date.create({
+    const create = await db.Dates.create({
       name: req.body.location,
       rating: req.body.rating,
     });
 
-    const results = await db.Date.findAll({
+    const results = await db.Dates.findAll({
       where: {
         name: req.body.location,
       },
