@@ -10,7 +10,9 @@ module.exports = (app) => {
   // Index route loads view.html
   app.get("/", (req, res) => {
     //res.sendFile(path.join(__dirname, "../public/view.html"))
-    res.render(path.join(__dirname, "../views/index"));
+    //res.render(path.join(__dirname, "../views/index"));
+
+    res.render("index");
   });
 
   // Add route loads the add.html page,
