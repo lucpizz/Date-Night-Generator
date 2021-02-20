@@ -13,6 +13,12 @@ $("#my-form").on("submit", (e) => {
   console.log(location, rating);
 
   $.post("/api/add", data, (response) => {
+    // response.forEach(name, (response.location) => {
+    //   console.log(response.name);
+    // });
+
+    console.log(response);
+
     console.log("It Works!", response);
   }).fail((err) => {
     console.log("It's Broken!", err);

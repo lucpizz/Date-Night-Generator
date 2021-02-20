@@ -23,14 +23,15 @@ app.set("view engine", "handlebars");
 
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+require("./routes/date-routes.js")(app);
 
 // require(`./routes/api-routes.js`)(app);
 //app.use("/music", routes);
 // app.use(routes);
 
-const htmlRouter = require("./routes/date-routes");
+//const htmlRouter = require("./routes/date-routes");
 const db = require("./models");
-htmlRouter(app);
+//htmlRouter(app);
 
 const force = true;
 

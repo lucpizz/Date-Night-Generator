@@ -9,11 +9,16 @@ module.exports = (app) => {
   app.post("/api/add", async (req, res) => {
     console.log(req.body);
 
-    db.Date.create(req.body);
+    //console.log(req.body.name, req.body.body);
+
+    const create = await db.Date.create({
+      name: req.body.location,
+      body: req.body.body,
+    }).then((dbDate) => res.json(dbDate));
 
     const results = await db.Date.findAll({
       where: {
-        location: req.body.location,
+        name: req.body.location,
       },
     });
 
