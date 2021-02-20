@@ -1,16 +1,30 @@
-module.exports = (sequelize, Sequelize) => {
-  return sequelize.define("Date", {
+module.exports = (sequelize, DataTypes) => {
+  const Date = sequelize.define("Date", {
     name: {
-      type: Sequelize.STRING,
-      allowNull: false,
-      validate: {
-        len: [1],
-      },
+      type: DataTypes.STRING,
+      AllowNull: false,
     },
-    body: {
-      type: Sequelize.TEXT,
-      allowNull: false,
-      len: [1],
+    rating: {
+      type: DataTypes.INTEGER,
+      AllowNull: false,
     },
   });
+  return Date;
 };
+
+// module.exports = (sequelize, DataTypes) => {
+//   return sequelize.define("Date", {
+//     name: {
+//       type: Sequelize.STRING,
+//       allowNull: false,
+//       validate: {
+//         len: [1],
+//       },
+//     },
+//     body: {
+//       type: Sequelize.TEXT,
+//       allowNull: false,
+//       len: [1],
+//     },
+//   });
+// };

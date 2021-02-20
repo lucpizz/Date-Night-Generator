@@ -1,16 +1,14 @@
-      
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo playlist-title center">Restaurant and Movie Rater</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i
-                        class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down"></ul>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="">test</a></li>
-                    <li><a href="">test</a></li>
-                </ul>
-            </div>
-        </nav>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo playlist-title center">Restaurant and Movie Rater</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down"></ul>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="">test</a></li>
+      <li><a href="">test</a></li>
+    </ul>
+  </div>
+</nav>
 
 
 <div class="col s12 m7">
@@ -22,10 +20,10 @@
         <form id="my-form">
 
           <label for="location">Enter your restaurant:</label>
-          <input type="text" name="location" id="location" placeholder="Restaurant or Movie" <div class="ratings">
-          <label for="location">How many stars?:</label>
-          <input type="text" name="location" id="location" placeholder="1-5" <div class="ratings">
-          <button type-"submit">Submit</button>
+          <input type="text" name="location" id="location" placeholder="Restaurant or Movie" class="ratings" />
+          <label for="rating">How many stars?:</label>
+          <input type="text" name="rating" id="rating" placeholder="1-5" class="ratings" />
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
@@ -41,7 +39,7 @@
     </div>
     <div class="card-stacked">
       <div class="card-content dbinfo">
-
+        {{{dbinfo}}}
       </div>
     </div>
   </div>
@@ -51,13 +49,13 @@
 
 <script>
 
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, options);
   });
-    </script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 </form>
