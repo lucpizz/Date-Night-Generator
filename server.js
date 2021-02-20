@@ -32,7 +32,7 @@ const htmlRouter = require("./routes/date-routes");
 const db = require("./models");
 htmlRouter(app);
 
-const force =  true;
+const force = true;
 
 db.sequelize.sync({ force }).then(() => {
   app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
@@ -40,7 +40,7 @@ db.sequelize.sync({ force }).then(() => {
 
 // Start our server so that it can begin listening to client requests.
 //dateTest.sequelize.sync().then(() => {
- // app.listen(PORT, () => {
+// app.listen(PORT, () => {
 //    console.log(`Server listening on: http://localhost:${PORT}`);
 //  });
 //});
