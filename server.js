@@ -26,7 +26,7 @@ require("./routes/api-routes.js")(app);
 
 // require(`./routes/api-routes.js`)(app);
 //app.use("/music", routes);
-g// app.use(routes);
+// app.use(routes);
 
 const htmlRouter = require("./routes/date-routes");
 const db = require("./models");
