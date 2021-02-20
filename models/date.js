@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Date = sequelize.define("Date", {
+  const Dates = sequelize.define("Dates", {
     name: {
       type: DataTypes.STRING,
       AllowNull: false,
@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
       AllowNull: false,
     },
   });
-  return Date;
+  return Dates;
 };
 
 // module.exports = (sequelize, DataTypes) => {

@@ -1,3 +1,29 @@
+$(document).ready(() => {
+  console.log("test");
+
+  $.get("/api/Dates", (response) => {
+    response.forEach((data) => {
+      //$(data).appendTo(".dbinfo");
+
+      $(".dbinfo").append(
+        `<p>${data.name} ${data.rating}</p><button class="delete" id=${data.id}>delete</button>`
+      );
+      location.focus();
+    });
+
+    $(".delete").on("click", () => {
+      console.log("test-delete");
+      $.ajax({
+        url: `/api/Dates/${this.id}`,
+        type: "DELETE",
+        success: (result) => {
+          console.log(result);
+        },
+      });
+    });
+  });
+});
+
 $("#my-form").on("submit", (e) => {
   e.preventDefault();
 
@@ -14,10 +40,13 @@ $("#my-form").on("submit", (e) => {
   console.log(location, rating);
 
   $.post("/api/add", data, (response) => {
+    // $(".dbinfo").empty();
     response.forEach((data) => {
       //$(data).appendTo(".dbinfo");
 
-      $(".dbinfo").append(`<p>${data.name} ${data.rating}</p>`);
+      $(".dbinfo").append(
+        `<p>${data.name} ${data.rating}</p><button class="delete" id=${data.id}>delete</button>`
+      );
       location.val("");
       rating.val("");
 
@@ -26,7 +55,30 @@ $("#my-form").on("submit", (e) => {
       //console.log(response.name);
     });
 
-    //console.log(response);
+    $(".delete").on("click", (e) => {
+      console.log("test-delete");
+      $.ajax({
+        url: `/api/Dates/${e.target.id}`,
+        type: "DELETE",
+        success: (response) => {
+          $(".dbinfo").empty();
+
+          response.forEach((data) => {
+            //$(data).appendTo(".dbinfo");
+
+            $(".dbinfo").append(
+              `<p>${data.name} ${data.rating}</p><button class="delete" id=${data.id}>delete</button>`
+            );
+            location.val("");
+            rating.val("");
+
+            location.focus();
+
+            //console.log(response.name);
+          });
+        },
+      });
+    });
 
     console.log("It Works!", response);
   }).fail((err) => {
