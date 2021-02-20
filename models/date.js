@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
   return sequelize.define("Date", {
-    title: {
+    name: {
       type: Sequelize.STRING,
       allowNull: false,
       validate: {
