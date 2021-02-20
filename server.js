@@ -21,19 +21,12 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-<<<<<<< HEAD
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 // require(`./routes/api-routes.js`)(app);
 //app.use("/music", routes);
-=======
-// Import routes and give the server access to them.
-//const routes = require("./controllers/dateController.js");
-// require(`./routes/api-routes.js`)(app);
-//app.use("/music" , routes);
->>>>>>> fd077840774583f4fefb496762bb934ca33c6834
-// app.use(routes);
+g// app.use(routes);
 
 const htmlRouter = require("./routes/date-routes");
 const db = require("./models");
