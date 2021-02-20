@@ -45,7 +45,7 @@ $("#my-form").on("submit", (e) => {
       //$(data).appendTo(".dbinfo");
 
       $(".dbinfo").append(
-        `<p>${data.name} ${data.rating}</p><button class="delete" id=${data.id}>delete</button>`
+          `<p>${data.name} ${data.rating}</p><button class="delete" id=${data.id}>delete</button>`
       );
       location.val("");
       rating.val("");
@@ -67,7 +67,7 @@ $("#my-form").on("submit", (e) => {
             //$(data).appendTo(".dbinfo");
 
             $(".dbinfo").append(
-              `<p>${data.name} ${data.rating}</p><button class="delete" id=${data.id}>delete</button>`
+              `<p>${data.name} ${data.rating}</p><button class="delete btn waves-effect waves-light" id=${data.id}>delete</button>`
             );
             location.val("");
             rating.val("");
