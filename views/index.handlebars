@@ -1,61 +1,56 @@
-<nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo playlist-title center">Restaurant and Movie Rater</a>
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down"></ul>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="">test</a></li>
-      <li><a href="">test</a></li>
-    </ul>
-  </div>
-</nav>
 
-
-<div class="col s12 m7">
-  <div class="card horizontal">
-    <div class="card-image">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo playlist-title center">Restaurant and Movie Rater</a>
+      {{!-- <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+      --}}
+      <ul class="right hide-on-med-and-down"></ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="">test</a></li>
+        <li><a href="">test</a></li>
+      </ul>
     </div>
-    <div class="card-stacked">
-      <div class="card-content">
-        <form id="my-form">
+  </nav>
 
-          <label for="location">Enter your restaurant:</label>
-          <input type="text" name="location" id="location" placeholder="Restaurant or Movie" class="ratings" />
-          <label for="rating">How many stars?:</label>
-          <input type="text" name="rating" id="rating" placeholder="1-5" class="ratings" />
-          <button type="submit">Submit</button>
-        </form>
+<body style = "background-color: #2b2b2b;">
+<div class="background-styling"></div>
+  <div class="col s12 m7">
+    <div class="card horizontal background-styling">
+      <div class="card-stacked background-styling">
+        <div class="card-content background-styling">
+          <form id="my-form" class="form-styling">
+
+            <label for="location">Enter your restaurant:</label>
+            <input class="background-styling" type="text" name="location" id="location" placeholder="Restaurant or Movie" 
+            <label for="location">How many stars?:</label>
+            <input class="background-styling" type="text" name="location" id="location" placeholder="1-5"  
+          </form>
+          <button class="btn waves-effect waves-light blue-btn" type ="submit">submit</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-</div>
+  </div>
 
 
-<div class="col s12 m7">
-  <div class="card horizontal">
-    <div class="card-image">
-    </div>
-    <div class="card-stacked">
-      <div class="card-content dbinfo">
-        {{{dbinfo}}}
+  <div class="col s12 m7">
+    <div class="card horizontal background-styling">
+      <div class="card-stacked background-styling">
+        <div class="card-content background-styling">
+          <form id="my-form">
+            {{{dbinfo}}}
+          </form>
+        </div>
       </div>
     </div>
   </div>
+
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  </form>
 </div>
-
-</div>
-
-<script>
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
-</script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-</form>
+</body>

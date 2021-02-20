@@ -4,9 +4,6 @@
     .btn-large {
         margin-left: 10px;
     }
-    nav .playlist-title{ 
-        font-size: 2.25rem;
-    }  
     .flex-container {
         display: flex;
         align-items: center;
@@ -14,10 +11,7 @@
         padding-bottom: 0px;
         padding-top: 0px;
     }    
-    .playlistview-tmbnail { 
-        max-width: 100px;
-        max-height: 100px;
-    }
+
     h4 {
         font-size: 2.5rem;
     }
@@ -34,9 +28,7 @@
 }
 
 @media only screen and (max-width: 361px){
-    nav .playlist-title{ 
-        font-size: 1.5rem;
-    }  
+
 }
 
 @media screen and (max-height: 450px) {
@@ -66,4 +58,13 @@
         height: 380px;
         width: 655px;
   }
+}
+
+.nav-wrapper {
+    background-color: #2BBBAD;
+}
+
+.background-styling {
+    background-color: #1c1c1c;
+    color: #fff; 
 }
