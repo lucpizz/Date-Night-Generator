@@ -4,7 +4,7 @@ module.exports = {
   development: {
     username: "root",
     password: "root",
-    database: "date_DB",
+    database: "date_db",
     host: "localhost",
     port: 3306,
     dialect: "mysql",
@@ -12,7 +12,7 @@ module.exports = {
   production: {
     username: "root",
     password: "root",
-    database: "date_DB",
+    database: "date_db",
     host: "localhost",
     port: 3306,
     dialect: "mysql",
