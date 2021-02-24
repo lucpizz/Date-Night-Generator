@@ -12,7 +12,7 @@ module.exports = (app) => {
   // POST route for saving a new dates
   app.post("/api/Date", (req, res) => {
     db.Date.create({
-      text: req.body.text,
+      name: req.body.text,
       complete: req.body.complete,
     }).then((dbDate) => res.json(dbDate));
   });

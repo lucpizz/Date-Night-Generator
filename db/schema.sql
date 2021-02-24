@@ -5,7 +5,7 @@ USE date_DB;
 
 CREATE TABLE `date_DB` (
 
-`id` Int(30) AUTO_INCREMENT NOT NULLL,
+`id` Int(30) AUTO_INCREMENT NOT NULL,
 `weather` VARCHAR( 255),
 `restuarant` VARCHAR( 255),
 `food` VARCHAR( 255),
